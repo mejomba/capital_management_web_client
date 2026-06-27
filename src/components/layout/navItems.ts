@@ -14,8 +14,8 @@ export const NAV_ITEMS: NavItem[] = [
   { to: "/prices", label: "قیمت‌ها", ready: true },
   { to: "/transactions", label: "تراکنش‌ها", ready: true },
   { to: "/holdings", label: "موجودی", ready: true },
-  { to: "/liabilities", label: "بدهی‌ها", ready: false },
-  { to: "/goals", label: "اهداف", ready: false },
+  { to: "/liabilities", label: "بدهی‌ها", ready: true },
+  { to: "/goals", label: "اهداف", ready: true },
   { to: "/reports", label: "گزارش‌ها", ready: false },
   { to: "/settings", label: "تنظیمات", ready: false },
 ];

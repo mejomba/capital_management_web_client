@@ -14,8 +14,14 @@ export function ControlledTextField<T extends FieldValues>({ control, name, ...r
       render={({ field, fieldState }) => (
         <TextField
           {...rest}
-          {...field}
+          name={field.name}
+          inputRef={field.ref}
+          onBlur={field.onBlur}
           value={field.value ?? ""}
+          // Emit undefined for empty so optional money/decimal fields are omitted
+          // (an empty "" would fail the generated Decimal regex), while required
+          // fields still report "required".
+          onChange={(e) => field.onChange(e.target.value === "" ? undefined : e.target.value)}
           error={Boolean(fieldState.error)}
           helperText={fieldState.error?.message}
           fullWidth
