@@ -10,6 +10,19 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
+  build: {
+    chunkSizeWarningLimit: 1200,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          mui: ["@mui/material", "@mui/icons-material", "@mui/x-data-grid", "@mui/x-date-pickers"],
+          charts: ["recharts"],
+          datetime: ["moment", "moment-jalaali", "dayjs"],
+          vendor: ["react", "react-dom", "react-router-dom", "@tanstack/react-query"],
+        },
+      },
+    },
+  },
   server: {
     port: 5173,
     proxy: {

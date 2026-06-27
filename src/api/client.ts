@@ -31,15 +31,16 @@ api.use(authMiddleware);
 /**
  * Unwrap an openapi-fetch result, throwing the API error envelope on failure so
  * React Query treats it as an error. Never recomputes anything — pure transport.
+ * (A 2xx with an empty body — e.g. 204 from DELETE — resolves to undefined.)
  */
 export async function unwrap<T>(
   result: Promise<{ data?: T; error?: unknown }>,
 ): Promise<T> {
   const { data, error } = await result;
-  if (error !== undefined || data === undefined) {
+  if (error !== undefined) {
     throw new ApiError(error);
   }
-  return data;
+  return data as T;
 }
 
 type ErrorEnvelope = { error?: { code?: string; message?: string; details?: unknown } };
