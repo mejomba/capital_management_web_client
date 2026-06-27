@@ -9,11 +9,11 @@ export interface NavItem {
 // always looks complete without dead 404 links.
 export const NAV_ITEMS: NavItem[] = [
   { to: "/", label: "داشبورد", ready: false },
-  { to: "/accounts", label: "حساب‌ها", ready: false },
-  { to: "/assets", label: "دارایی‌ها", ready: false },
-  { to: "/prices", label: "قیمت‌ها", ready: false },
-  { to: "/transactions", label: "تراکنش‌ها", ready: false },
-  { to: "/holdings", label: "موجودی", ready: false },
+  { to: "/accounts", label: "حساب‌ها", ready: true },
+  { to: "/assets", label: "دارایی‌ها", ready: true },
+  { to: "/prices", label: "قیمت‌ها", ready: true },
+  { to: "/transactions", label: "تراکنش‌ها", ready: true },
+  { to: "/holdings", label: "موجودی", ready: true },
   { to: "/liabilities", label: "بدهی‌ها", ready: false },
   { to: "/goals", label: "اهداف", ready: false },
   { to: "/reports", label: "گزارش‌ها", ready: false },

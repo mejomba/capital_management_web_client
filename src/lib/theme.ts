@@ -1,7 +1,10 @@
+import { faIR } from "@mui/material/locale";
 import { createTheme } from "@mui/material/styles";
+import { faIR as dataGridFaIR } from "@mui/x-data-grid/locales";
 
-export const theme = createTheme({
-  direction: "rtl",
+export const theme = createTheme(
+  {
+    direction: "rtl",
   palette: {
     mode: "light",
     primary: { main: "#1f6f54" },
@@ -17,5 +20,8 @@ export const theme = createTheme({
       "sans-serif",
     ].join(","),
   },
-  shape: { borderRadius: 10 },
-});
+    shape: { borderRadius: 10 },
+  },
+  faIR,
+  dataGridFaIR,
+);
