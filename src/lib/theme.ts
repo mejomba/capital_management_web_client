@@ -4,7 +4,7 @@ import { faIR as dataGridFaIR } from "@mui/x-data-grid/locales";
 
 export const theme = createTheme(
   {
-    direction: "rtl",
+    direction: "ltr",
   palette: {
     mode: "light",
     primary: { main: "#1f6f54" },

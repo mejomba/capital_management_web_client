@@ -85,7 +85,7 @@ export function AppLayout() {
       {/* Mobile: temporary overlay drawer */}
       <Drawer
         variant="temporary"
-        anchor="right"
+        anchor="left"
         open={mobileOpen}
         onClose={() => setMobileOpen(false)}
         ModalProps={{ keepMounted: true }}
@@ -102,7 +102,7 @@ export function AppLayout() {
           negative margin reclaims the space (canonical MUI persistent pattern). */}
       <Drawer
         variant="persistent"
-        anchor="right"
+        anchor="left"
         open={desktopOpen}
         sx={{
           display: { xs: "none", md: "block" },
@@ -121,9 +121,9 @@ export function AppLayout() {
           p: 3,
           minWidth: 0,
           transition: theme.transitions.create("margin"),
-          // RTL: the persistent drawer sits on the right; reclaim its reserved
-          // space when it is closed.
-          mr: { md: desktopOpen ? 0 : `-${DRAWER_WIDTH}px` },
+          // The persistent drawer sits on the left; reclaim its reserved space
+          // when it is closed.
+          ml: { md: desktopOpen ? 0 : `-${DRAWER_WIDTH}px` },
         }}
       >
         <Toolbar />
