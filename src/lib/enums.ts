@@ -8,6 +8,8 @@ type LiabilityType = components["schemas"]["LiabilityType"];
 type LiabilityEventType = components["schemas"]["LiabilityEventType"];
 type GoalType = components["schemas"]["GoalType"];
 type GoalStatus = components["schemas"]["GoalStatus"];
+type DisplayCurrency = components["schemas"]["DisplayCurrency"];
+type HurdleMode = components["schemas"]["HurdleMode"];
 
 export const ACCOUNT_TYPE_LABELS: Record<AccountType, string> = {
   bank: "بانک",
@@ -72,6 +74,21 @@ export const GOAL_STATUS_LABELS: Record<GoalStatus, string> = {
   archived: "بایگانی",
 };
 
+export const DISPLAY_CURRENCY_LABELS: Record<DisplayCurrency, string> = {
+  irr: "ریال",
+  usd: "دلار",
+  both: "هر دو",
+};
+
+export const HURDLE_MODE_LABELS: Record<HurdleMode, string> = {
+  fixed: "نرخ ثابت",
+  inflation: "نرخ تورم",
+  usd_growth: "رشد دلار",
+};
+
+export const DISPLAY_CURRENCIES = Object.keys(DISPLAY_CURRENCY_LABELS) as DisplayCurrency[];
+export const HURDLE_MODES = Object.keys(HURDLE_MODE_LABELS) as HurdleMode[];
+
 export const ACCOUNT_TYPES = Object.keys(ACCOUNT_TYPE_LABELS) as AccountType[];
 export const ASSET_CLASSES = Object.keys(ASSET_CLASS_LABELS) as AssetClass[];
 export const TRANSACTION_TYPES = Object.keys(TRANSACTION_TYPE_LABELS) as TransactionType[];
@@ -89,4 +106,6 @@ export type {
   LiabilityEventType,
   GoalType,
   GoalStatus,
+  DisplayCurrency,
+  HurdleMode,
 };

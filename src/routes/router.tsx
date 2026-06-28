@@ -9,8 +9,9 @@ import { DashboardPage } from "@/features/dashboard/DashboardPage";
 import { GoalsPage } from "@/features/goals/GoalsPage";
 import { HoldingsPage } from "@/features/holdings/HoldingsPage";
 import { LiabilitiesPage } from "@/features/liabilities/LiabilitiesPage";
-import { ComingSoon } from "@/features/misc/ComingSoon";
 import { PricesPage } from "@/features/prices/PricesPage";
+import { ReportsPage } from "@/features/reports/ReportsPage";
+import { SettingsPage } from "@/features/settings/SettingsPage";
 import { TransactionsPage } from "@/features/transactions/TransactionsPage";
 
 import { ProtectedRoute, PublicOnlyRoute } from "./ProtectedRoute";
@@ -37,8 +38,8 @@ export const router = createBrowserRouter([
           { path: "/holdings", element: <HoldingsPage /> },
           { path: "/liabilities", element: <LiabilitiesPage /> },
           { path: "/goals", element: <GoalsPage /> },
-          { path: "/reports", element: <ComingSoon title="گزارش‌ها" /> },
-          { path: "/settings", element: <ComingSoon title="تنظیمات" /> },
+          { path: "/reports", element: <ReportsPage /> },
+          { path: "/settings", element: <SettingsPage /> },
         ],
       },
     ],
