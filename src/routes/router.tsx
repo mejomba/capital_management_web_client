@@ -6,7 +6,9 @@ import { AssetsPage } from "@/features/assets/AssetsPage";
 import { LoginPage } from "@/features/auth/LoginPage";
 import { RegisterPage } from "@/features/auth/RegisterPage";
 import { DashboardPage } from "@/features/dashboard/DashboardPage";
+import { GoalsPage } from "@/features/goals/GoalsPage";
 import { HoldingsPage } from "@/features/holdings/HoldingsPage";
+import { LiabilitiesPage } from "@/features/liabilities/LiabilitiesPage";
 import { ComingSoon } from "@/features/misc/ComingSoon";
 import { PricesPage } from "@/features/prices/PricesPage";
 import { TransactionsPage } from "@/features/transactions/TransactionsPage";
@@ -33,8 +35,8 @@ export const router = createBrowserRouter([
           { path: "/prices", element: <PricesPage /> },
           { path: "/transactions", element: <TransactionsPage /> },
           { path: "/holdings", element: <HoldingsPage /> },
-          { path: "/liabilities", element: <ComingSoon title="بدهی‌ها" /> },
-          { path: "/goals", element: <ComingSoon title="اهداف" /> },
+          { path: "/liabilities", element: <LiabilitiesPage /> },
+          { path: "/goals", element: <GoalsPage /> },
           { path: "/reports", element: <ComingSoon title="گزارش‌ها" /> },
           { path: "/settings", element: <ComingSoon title="تنظیمات" /> },
         ],
